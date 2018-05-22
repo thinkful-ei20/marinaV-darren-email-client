@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 export function Sidebar(props) {
  
     const folders = props.folderList.map(folder => {
-        console.log(folder.name);
-
+        // console.log(folder.name);
         return ( <Link to={`/${folder.name.toLowerCase()}`} key={folder.id} className="folder-menu-list-item">
             <button>{folder.name}</button>
         </Link>
