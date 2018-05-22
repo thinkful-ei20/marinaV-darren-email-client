@@ -24,6 +24,13 @@ const initialState = {
                 to: "TeamWoz@Woz.org",
                 title: "Do you know PHP?",
                 content: "Dear Woz.  We are in need of a PHP expert.  Fast.  Zuck x"
+            },
+            2: {
+              id: 2,
+              from: "marina@gmail.com",
+              to: "Marina.org",
+              title: "Do you know Marina?",
+              content: "Dear Woz.  We are in need of a PHP expert.  Fast.  Zuck x"
             }
         }
     },
@@ -49,6 +56,7 @@ const initialState = {
     }
 };
 
+// Create store
 const store = createStore(state => state, initialState);
 
 

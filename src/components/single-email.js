@@ -17,6 +17,9 @@ export function SingleEmail(props) {
     );
 }
 
-const mapStateToProps = (state, props) => state[props.folderId].emails[props.emailId];
+const mapStateToProps = (state, props) => {
+  console.log(props);
+  return state[props.match.params.folderId].emails[props.match.params.emailId];
+};
 
 export default connect(mapStateToProps)(SingleEmail);
