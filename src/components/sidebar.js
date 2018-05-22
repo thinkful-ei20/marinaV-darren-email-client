@@ -1,13 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import './sidebar.css';
+import { Link } from 'react-router-dom';
 
 export function Sidebar(props) {
-    const folders = props.folderList.map(folder =>
-        <li key={folder.id} className="folder-menu-list-item">
-            {folder.name}
-        </li>
-    );
+ 
+    const folders = props.folderList.map(folder => {
+        console.log(folder.name);
+
+        return ( <Link to={`/${folder.name.toLowerCase()}`} key={folder.id} className="folder-menu-list-item">
+            <button>{folder.name}</button>
+        </Link>
+        );
+        
+    });
 
     return (
         <div className="sidebar sidebar-left">

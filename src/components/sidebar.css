@@ -13,7 +13,8 @@
     padding: 0;
 }
 
-.folder-menu-list-item {
+.folder-menu-list-item button {
+    display: flex;
     padding: 10px;
     border-bottom: 1px solid #000;
 }
